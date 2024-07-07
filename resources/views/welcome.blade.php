@@ -14,11 +14,15 @@
     <!-- Styles -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased">
-    <div class="container mt-5">
-        <h1 class="text-primary">Bootstrap & Font Awesome 測試</h1>
-        <p class="text-secondary">Font Awesome 正常運作 <i class="fas fa-check-circle"></i></p>
-        <button class="btn btn-primary">Bootstrap 按鈕</button>
+<body class="font-sans antialiased bg-gray-100">
+    <div class="container mx-auto mt-10 p-5">
+        <h1 class="text-3xl font-bold text-center text-blue-600">Welcome to {{ config('app.name', 'Laravel') }}</h1>
+        <p class="text-center text-gray-700 mt-5">This is a simple page styled with Tailwind CSS.</p>
+        <div class="mt-10 text-center">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Tailwind Button
+            </button>
+        </div>
     </div>
 </body>
 </html>

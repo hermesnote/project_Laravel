@@ -2,12 +2,12 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <!-- Name -->
+        {{-- <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('姓名')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
+        </div> --}}
 
         <!-- Email Address -->
         <div class="mt-4">
@@ -41,15 +41,21 @@
 
         <!-- Social Login Buttons -->
         <div class="mt-4">
-            <a href="{{ url('login/google') }}" class="btn btn-danger btn-block">
-                <i class="fab fa-google"></i> 使用 Google 登入
+            <!-- Google 登入按鈕 -->
+            <a href="{{ url('login/google') }}" class="bg-red-500 text-white font-bold py-2 px-4 rounded w-full flex items-center justify-center">
+                <i class="fab fa-google mr-2"></i> 使用 Google 登入
             </a>
-            <a href="{{ url('login/facebook') }}" class="btn btn-primary btn-block mt-2">
-                <i class="fab fa-facebook"></i> 使用 Facebook 登入
+
+            <!-- Facebook 登入按鈕 -->
+            <a href="{{ url('login/facebook') }}" class="bg-blue-600 text-white font-bold py-2 px-4 rounded w-full flex items-center justify-center mt-4">
+                <i class="fab fa-facebook-f mr-2"></i> 使用 Facebook 登入
             </a>
-            <a href="{{ url('login/twitter') }}" class="btn btn-info btn-block mt-2">
-                <i class="fab fa-twitter"></i> 使用 Twitter 登入
+
+            <!-- Twitter 登入按鈕 -->
+            <a href="{{ url('login/twitter') }}" class="bg-blue-400 text-white font-bold py-2 px-4 rounded w-full flex items-center justify-center mt-4">
+                <i class="fab fa-twitter mr-2"></i> 使用 Twitter 登入
             </a>
+
         </div>
 
         <div class="flex items-center justify-end mt-4">
